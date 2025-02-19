@@ -1,7 +1,7 @@
 #pip  install flask
 from flask import Flask, jsonify, request, make_response
 
-app = Flask(_name_)
+app = Flask(__name__)
 
 businesses = [
     {
@@ -109,7 +109,7 @@ def add_new_review(biz_id):
    
         return make_response(jsonify(new_review),200)
 
-if _name_ == '_main_':
+if __name__ == '__main__':
     app.run(debug=True)
 
 
